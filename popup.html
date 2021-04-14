@@ -1,9 +1,57 @@
 <!doctype html>
 <html>
     <head>
-        <title>Hackathon Project</title>
-    </head>
-    <body>
-        <h1>HEALTH</h1>
+        <title>FLIR Strava Health</title>
+        <meta charset ="utf-8"/>
+        <link rel="stylesheet"
+      type="text/css" href="styling/widget_styling.css">
+      </head>
+    <body class='global'>
+        <div class = 'container'>
+            <div class='weather'>
+                <h1 class ='weather-title'>Forecast</h1>
+                <img src="images/confused.png" alt="No data... weather is confusing!">
+                <h2>Temperature</h2>
+            </div>
+            <div class='line'> </div>
+            <div class='strava'>
+                <h1>Weekly Strava Stats</h1>
+                <table class='strava-stats'>
+                    <tr>
+                        <td>
+                            <img src="images/bike.PNG" alt="Bike icon">
+                        </td>
+                        <td>
+                            <div style="width: 100px;height: 30px;background-color:#D44E14;"></div>
+                        </td>
+                        <td>
+                            <h2>100 km</h2>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="images/run.PNG" alt="Run icon">
+                        </td>
+                        <td class='strava-progress-bar'>
+                            <div style="width: 25px;height: 30px;background-color: #D44E14;"></div>
+                        </td>
+                        <td>
+                            <h2>25 km</h2>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="images/swim.PNG" alt="swim icon">
+                        </td>
+                        <td>
+                            <div style="width: 5px;height: 30px;background-color: #D44E14;"></div>
+                        </td>
+                        <td>
+                            <h2>0 km</h2>
+                        </td>
+                    </tr>
+                </table>
+            </div>  
+        </div>
     </body>
 </html>
