@@ -7,16 +7,16 @@
 
   "action": {
    "default_icon": "images/icon.png",
-   "default_popup": "popup.html"
+   "default_popup": "popup.html",
+   "service_worker": "background.js"
   },
+
   "permissions": [
    "activeTab",
    "storage",
-   "scripting",
-   "http://*/"
+   "scripting"
   ],
+
   "background": {
-   "scripts": ["js/weather_api.js"],
-   "service_worker": "background.js"
   }
 }
