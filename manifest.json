@@ -1,19 +1,22 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
 
   "name": "Health",
   "description": "Health...",
   "version": "1.0",
 
-  "browser_action": {
+  "action": {
    "default_icon": "images/icon.png",
    "default_popup": "popup.html"
   },
   "permissions": [
    "activeTab",
+   "storage",
+   "scripting",
    "http://*/"
   ],
   "background": {
-   "scripts": ["js/weather_api.js"]
+   "scripts": ["js/weather_api.js"],
+   "service_worker": "background.js"
   }
 }
