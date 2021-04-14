@@ -13,7 +13,6 @@
 
   "permissions": [
    "activeTab",
-   "http://*/",
    "geolocation",
    "storage",
    "scripting"
