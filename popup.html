@@ -1,9 +1,64 @@
 <!doctype html>
 <html>
     <head>
-        <title>Hackathon Project</title>
-    </head>
-    <body>
-        <h1>HEALTH</h1>
+        <title>FLIR Strava Health</title>
+        <meta charset ="utf-8"/>
+        <link rel="stylesheet"
+      type="text/css" href="styling/widget_styling.css">
+      </head>
+    <body class='global'>
+        <div class = 'container'>
+            <div class='weather'>
+                <h1 class ='weather-title'>Forecast</h1>
+                <img id="weather_icon" src="images/confused.png" alt="No data... weather is confusing!">
+                <div class = "location">
+                    <img src='images/location.png' alt='Weather location'>
+                    <p id="location_name"></p>
+                </div>
+                <h2 id="day1_temp">Temperature</h2>
+            </div>
+            <div class='line'> </div>
+            <div class='strava'>
+                <h1>Weekly Strava Stats</h1>
+                <table class='strava-stats'>
+                    <tr>
+                        <td>
+                            <img src="images/bike.PNG" alt="Bike icon">
+                        </td>
+                        <td class='strava-progress-bar'>
+                            <div class="bars" id="bikeBar"></div>
+                        </td>
+                        <td>
+                            <h2 id="bikeDistance"></h2>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="images/run.PNG" alt="Run icon">
+                        </td>
+                        <td class='strava-progress-bar'>
+                            <div class="bars" id="runBar"></div>
+                        </td>
+                        <td>
+                            <h2 id="runDistance"></h2>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="images/swim.PNG" alt="swim icon">
+                        </td>
+                        <td class='strava-progress-bar'>
+                            <div class="bars" id="swimBar"></div>
+                        </td>
+                        <td>
+                            <h2 id="swimDistance"></h2>
+                        </td>
+                    </tr>
+                </table>
+            </div>  
+        </div>
+		<script type="text/javascript" src="js/weather_api.js"></script>
+        <div id="myData"></div>
+        <script type="text/javascript" src="popup.js"></script>
     </body>
 </html>
