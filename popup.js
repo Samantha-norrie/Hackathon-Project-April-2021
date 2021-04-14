@@ -14,7 +14,9 @@ function getActivities(res){
     return response.json();
     })
     .then(function (data) {
-      appendData(data)
+      //appendData(data)
+      console.log(data)
+      display(data)
     });
 
   function appendData(data) {
@@ -25,6 +27,37 @@ function getActivities(res){
       mainContainer.appendChild(div);
     }
   }
+}
+
+function display(data){
+	totalBikeDistance = 0;
+  totalRunDistance = 0;
+  totalSwimDistance = 0;
+
+  for (i = 0; i < 7; i++) {
+    if (data[i]["type"] == "Ride")
+    {
+      totalBikeDistance += data[i]["distance"]; 
+    }
+    else if (data[i]["type"] == "Run")
+    {
+      totalRunDistance += data[i]["distance"]; 
+    }
+    else
+    {
+      totalSwimDistance += data[i]["distance"]; 
+    }
+  }
+  totalBikeDistance = totalBikeDistance/1000
+  
+	document.getElementById("bikeBar").style.width = totalBikeDistance + "px";
+	document.getElementById('bikeDistance').innerHTML = totalBikeDistance + " km";
+
+  document.getElementById("runBar").style.width = totalRunDistance + "px";
+	document.getElementById('runDistance').innerHTML = totalRunDistance + " km";
+
+  document.getElementById("swimBar").style.width = totalSwimDistance + "px";
+	document.getElementById('swimDistance').innerHTML = totalSwimDistance + " km";
 }
 
 function reAuthorize(){
