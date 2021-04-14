@@ -47,7 +47,16 @@ function GetPreviousDay(event)
 
 function GetNextDay(event)
 {
+	if (current_day < 7)
+	{
+		current_day = current_day + 1
+		if (current_day == 7)
+		{
+			// Set opacity on button
+		}
+	}
 	
+	GetWeatherDataAsync(latitude, longitude, ProcessWeatherData)
 }
 
 function SetLocationUI(area_name)
