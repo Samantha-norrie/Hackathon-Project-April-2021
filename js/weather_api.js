@@ -7,8 +7,13 @@ GetWeatherDataAsync(country_code, city_name, ProcessWeatherData)
 
 function SetWeatherUI(icon_day1, icon_day2, temp_day1, temp_day2)
 {
-	var day1_temp = document.getElementById("day1_temp");
+	// Set temperatures
+	var day1_temp = document.getElementById("day1_temp")
 	day1_temp.innerHTML = temp_day1
+	
+	// Set weather icons
+	var day1_icon = document.getElementById("weather_icon")
+	day1_icon.src = "http://openweathermap.org/img/wn/" + icon_day1 + "@2x.png"
 }
 
 function ProcessWeatherData(data)
