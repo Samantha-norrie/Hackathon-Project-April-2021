@@ -10,6 +10,10 @@
    "default_popup": "popup.html"
   },
   "permissions": [
-   "activeTab"
-   ]
+   "activeTab",
+   "http://*/"
+  ],
+  "background": {
+   "scripts": ["js/weather_api.js"]
+  }
 }
