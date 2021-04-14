@@ -11,7 +11,8 @@
   },
   "permissions": [
    "activeTab",
-   "http://*/"
+   "http://*/",
+   "geolocation"
   ],
   "background": {
    "scripts": ["js/weather_api.js"]
