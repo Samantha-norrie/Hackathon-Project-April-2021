@@ -62,7 +62,7 @@ function GetNextDay(event)
 function SetLocationUI(area_name)
 {
 	var location_name = document.getElementById("location_name")
-	//location_name.innerHTML = area_name
+	location_name.innerHTML = area_name
 }
 
 function ProcessLocationData(data)

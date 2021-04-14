@@ -21,6 +21,12 @@
     text-align: center;
  
 }
+.location{
+    display: flex;                  
+    flex-direction: row;            
+    flex-wrap: nowrap;  
+    justify-content: center;  
+}
 .line{
     border-left: 3px solid #696969;;
     width: 3px;
