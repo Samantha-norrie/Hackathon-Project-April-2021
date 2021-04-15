@@ -4,14 +4,15 @@
         <title>FLIR Strava Health</title>
         <meta charset ="utf-8"/>
         <link rel="stylesheet"
-      type="text/css" href="styling/widget_styling.css">
-      </head>
+        type="text/css" href="styling/widget_styling.css">
+    </head>
     <body class='global'>
         <div class = 'container'>
             <div class='weather'>
                 <h1 class ='weather-title'>Forecast</h1>
-                <div class="date">
-                    <button class='button' type="button" id="previous_day"><img src="images/rounded_triangle_left.png"></button>                  
+                <div class="date-display">
+                    <button class='button' type="button" id="previous_day"><img src="images/rounded_triangle_left.png"></button>
+                    <p id="date" class="date-string"></p>                  
                     <button class='button' type="button" id="next_day"><img src="images/rounded_triangle_right.png"></button>
                 </div>
                 <img id="weather_icon" src="images/confused.png" alt="No data... weather is confusing!">
@@ -19,13 +20,13 @@
                     <img src='images/location.png' alt='Weather location'>
                     <p id="location_name"></p>
                 </div>
-                <h2 id="day1_temp">Temperature</h2>
+                <h2 id="day1_temp" class="temperature">Temperature</h2>
             </div>
             <div class='line'> </div>
             <div class='strava'>
                 <h1>Weekly Strava Stats</h1>
                 <table class='strava-stats'>
-                    <tr>
+                    <tr class='row'>
                         <td>
                             <img src="images/bike.PNG" alt="Bike icon">
                         </td>
@@ -36,7 +37,7 @@
                             <h2 id="bikeDistance"></h2>
                         </td>
                     </tr>
-                    <tr>
+                    <tr class='row'>
                         <td>
                             <img src="images/run.PNG" alt="Run icon">
                         </td>
@@ -47,7 +48,7 @@
                             <h2 id="runDistance"></h2>
                         </td>
                     </tr>
-                    <tr>
+                    <tr class='row'>
                         <td>
                             <img src="images/swim.PNG" alt="swim icon">
                         </td>

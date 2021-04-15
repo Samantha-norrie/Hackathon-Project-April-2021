@@ -105,8 +105,8 @@ function SetWeatherUI(icon, temp)
 	day_icon.src = "http://openweathermap.org/img/wn/" + icon + "@2x.png"
 	
 	// Set date
-	//var date_icon = document.getElementById("date")
-	//date_icon.innerHTML = current_date
+	var date_icon = document.getElementById("date")
+	date_icon.innerHTML = current_date
 }
 
 function ProcessWeatherData(data)
@@ -132,7 +132,7 @@ function ProcessWeatherData(data)
 			var unix_timestamp = parseInt(result["daily"]["" + current_day]["dt"])
 			var date_obj = new Date(unix_timestamp * 1000)
 			
-			current_date = "" + date_obj.getMonth() + "-" + date_obj.getUTCDate()
+			current_date = "" + (date_obj.getMonth()+1) + "-" + date_obj.getUTCDate()
 		}
 		
 		SetWeatherUI(weather_icon, temperature)
