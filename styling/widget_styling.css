@@ -21,6 +21,16 @@
     text-align: center;
  
 }
+.date{
+    display: flex;                  
+    flex-direction: row;            
+    flex-wrap: nowrap;  
+    justify-content: center;   
+}
+.button{
+    width: 25px;
+    height: 25px;
+}
 .location{
     display: flex;                  
     flex-direction: row;            
