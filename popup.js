@@ -49,6 +49,8 @@ function display(data){
     }
   }
   totalBikeDistance = totalBikeDistance/1000
+  totalRunDistance = totalRunDistance/1000
+  totalSwimDistance = totalSwimDistance/1000
   
 	document.getElementById("bikeBar").style.width = totalBikeDistance + "px";
 	document.getElementById('bikeDistance').innerHTML = totalBikeDistance + " km";
